@@ -1,16 +1,17 @@
-Name:           geoipupdate
-Version:        
-Release:        1%{?dist}
-Summary:        
-
-License:        
-URL:            
-Source0:        
-
-BuildRequires:  
-Requires:       
+Name:       geoipupdate
+Version:    2.4.0
+Release:    1%{?dist}
+Summary:    Program to perform automatic updates of GeoIP2 and GeoIP databases
+Group:      System Environment/Base
+License:    GPLv2
+URL:        https://github.com/maxmind/geoipupdate
+Source0:    https://github.com/maxmind/geoipupdate/releases/download/v%{version}/geoipupdate-%{version}.tar.gz
+BuildRequires: curl-devel
+BuildRequires: zlib-devel
 
 %description
+The GeoIP Update program performs automatic updates of GeoIP2 and
+GeoIP Legacy binary databases.
 
 
 %prep
@@ -23,13 +24,26 @@ make %{?_smp_mflags}
 
 
 %install
-rm -rf $RPM_BUILD_ROOT
-%make_install
+rm -rf %{buildroot}
+make install DESTDIR=%{buildroot}
+
+
+%clean
+rm -rf %{buildroot}
+
+
+%post -p /sbin/ldconfig
+
+%postun -p /sbin/ldconfig
 
 
 %files
-%doc
-
+%defattr(-,root,root,-)
+%config(noreplace) /etc/GeoIP.conf
+%config /etc/GeoIP.conf.default
+%{_bindir}/geoipupdate
+%{_mandir}/man1/geoipupdate.1*
+%{_mandir}/man5/GeoIP.conf.5*
 
 
 %changelog
