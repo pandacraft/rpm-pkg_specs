@@ -7,8 +7,8 @@ License:        GNU GPL v3
 URL:            https://github.com/maxbube/mydumper
 Source0:        https://github.com/maxbube/mydumper/archive/v%{version}.tar.gz
 
-BuildRequires:  gcc gcc-c++ cmake glib2-devel mysql-devel zlib-devel pcre-devel openssl-devel
-Requires:       mysql-devel
+BuildRequires:  gcc gcc-c++ cmake glib2-devel mysql57-devel zlib-devel pcre-devel openssl-devel
+Requires:       mysql57-devel
 
 %description
 * Parallelism (hence, speed) and performance (avoids expensive character set conversion routines, efficient code overall)
