@@ -38,3 +38,5 @@ rm -rf $RPM_BUILD_ROOT
 %exclude %{__python_distdir}/%{__python_module}/*.pyo
 
 %changelog
+* Thu Nov 09 2017 Marwan Rabbâa <marwan.rabbaa@pandacraft.com> - 2.18.4
+- Package creation for production usage on amzn 2017.03

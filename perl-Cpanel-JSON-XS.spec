@@ -54,3 +54,5 @@ find %{buildroot} -type f -name '*.bs' -empty -delete
 %{_mandir}/man3/Cpanel::JSON::XS::Boolean.3*
 
 %changelog
+* Thu Nov 09 2017 Marwan Rabbâa <marwan.rabbaa@pandacraft.com> - 3.0237
+- Package creation for production usage on amzn 2017.03

@@ -41,3 +41,5 @@ rm -rf $RPM_BUILD_ROOT
 %exclude %{__python27_libdir}/slackclient/*.pyo
 
 %changelog
+* Thu Nov 09 2017 Marwan Rabbâa <marwan.rabbaa@pandacraft.com> - 1.0.9
+- Package creation for production usage on amzn 2017.03

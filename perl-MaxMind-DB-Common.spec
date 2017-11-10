@@ -46,3 +46,5 @@ find $RPM_BUILD_ROOT -depth -type d -exec rmdir {} 2>/dev/null ';'
 %exclude %{_datadir}/perl5/vendor_perl/Test
 
 %changelog
+* Thu Nov 09 2017 Marwan Rabbâa <marwan.rabbaa@pandacraft.com> - 0.040001
+- Package creation for production usage on amzn 2017.03

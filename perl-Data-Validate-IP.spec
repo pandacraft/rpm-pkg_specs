@@ -48,3 +48,5 @@ find $RPM_BUILD_ROOT -depth -type d -exec rmdir {} 2>/dev/null ';'
 %changelog
 * Wed Aug  9 2017 Marwan Rabbâa <marwan.rabbaa@pandacraft.com>
 - 
+* Thu Nov 09 2017 Marwan Rabbâa <marwan.rabbaa@pandacraft.com> - 0.27
+- Package creation for production usage on amzn 2017.03

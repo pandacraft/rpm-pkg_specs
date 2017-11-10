@@ -47,3 +47,5 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Nov 09 2017 Marwan Rabbâa <marwan.rabbaa@pandacraft.com> - 2.4.0
+- Package creation for production usage on amzn 2017.03

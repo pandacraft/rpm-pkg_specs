@@ -32,3 +32,5 @@ cp %{_usr}/%{_lib}/httpd/modules/%{name}.so $RPM_BUILD_ROOT/usr/%{_lib}/httpd/mo
 
 
 %changelog
+* Thu Nov 09 2017 Marwan Rabbâa <marwan.rabbaa@pandacraft.com> - 1.1.0
+- Package creation for production usage on amzn 2017.03

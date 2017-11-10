@@ -43,3 +43,5 @@ rm -rf $RPM_BUILD_ROOT
 %{__python_distdir}/*
 
 %changelog
+* Thu Nov 09 2017 Marwan Rabbâa <marwan.rabbaa@pandacraft.com> - 1.22
+- Package creation for production usage on amzn 2017.03

@@ -38,3 +38,5 @@ rm -rf $RPM_BUILD_ROOT
 %exclude %{__python27_libdir}/six.pyo
 
 %changelog
+* Thu Nov 09 2017 Marwan Rabbâa <marwan.rabbaa@pandacraft.com> - 1.11.0
+- Package creation for production usage on amzn 2017.03

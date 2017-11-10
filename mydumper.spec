@@ -36,3 +36,5 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Nov 09 2017 Marwan Rabbâa <marwan.rabbaa@pandacraft.com> - 0.9.3
+- Package creation for production usage on amzn 2017.03

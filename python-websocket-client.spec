@@ -40,5 +40,11 @@ rm -rf $RPM_BUILD_ROOT
 %doc LICENSE README.rst
 %{__python27_libdir}/websocket/*.py
 %{__python27_libdir}/websocket_client-%{version}.egg-info
+%exclude %{__python27_libdir}/websocket/*.pyc
+%exclude %{__python27_libdir}/websocket/*.pyo
+%exclude %{__python27_libdir}/websocket/tests
+%exclude %{__python27_libdir}/websocket/cacert.pem
 
 %changelog
+* Thu Nov 09 2017 Marwan Rabbâa <marwan.rabbaa@pandacraft.com> - 0.43.0
+- Package creation for production usage on amzn 2017.03
