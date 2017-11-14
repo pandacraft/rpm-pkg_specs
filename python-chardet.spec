@@ -1,10 +1,10 @@
 %define __python_module chardet
-%define __python_version 27
-%define __python_distdir %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")
+%define __python_version 36
+%define __python_distdir %(%{__python36} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")
 
 Name:           python%{__python_version}-%{__python_module}
 Version:        3.0.4
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Universal encoding detector for Python 2 and 3
 
 License:        LGPL
@@ -22,12 +22,12 @@ Requests allows you to send organic, grass-fed HTTP/1.1 requests, without the ne
 
 
 %build
-%{__python} setup.py build
+%{__python36} setup.py build
 
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install -O1 --skip-build --root $RPM_BUILD_ROOT --install-lib %{__python_distdir}
+%{__python36} setup.py install -O1 --skip-build --root $RPM_BUILD_ROOT --install-lib %{__python_distdir}
 
  
 %files
@@ -36,10 +36,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__python_distdir}/%{__python_module}/cli/*.py
 %{__python_distdir}/%{__python_module}-%{version}.egg-info
 /usr/local/bin/chardetect
-%exclude %{__python_distdir}/%{__python_module}/*.pyc
-%exclude %{__python_distdir}/%{__python_module}/cli/*.pyc
-%exclude %{__python_distdir}/%{__python_module}/*.pyo
-%exclude %{__python_distdir}/%{__python_module}/cli/*.pyo
+%exclude %{__python_distdir}/%{__python_module}/__pycache__
+%exclude %{__python_distdir}/%{__python_module}/cli/__pycache__
 
 %changelog
 * Thu Nov 09 2017 Marwan Rabbâa <marwan.rabbaa@pandacraft.com> - 3.0.4

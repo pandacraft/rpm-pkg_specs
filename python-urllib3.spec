@@ -1,10 +1,10 @@
 %define __python_module urllib3
-%define __python_version 27
-%define __python_distdir %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")
+%define __python_version 36
+%define __python_distdir %(%{__python36} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")
 
 Name:           python%{__python_version}-urllib3
 Version:        1.22
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Python HTTP library with thread-safe connection pooling, file post support, sanity friendly, and more.
 
 License:        MIT
@@ -30,12 +30,12 @@ urllib3 is a powerful, sanity-friendly HTTP client for Python. Much of the Pytho
 
 
 %build
-%{__python} setup.py build
+%{__python36} setup.py build
 
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install -O1 --skip-build --root $RPM_BUILD_ROOT --install-lib %{__python_distdir}
+%{__python36} setup.py install -O1 --skip-build --root $RPM_BUILD_ROOT --install-lib %{__python_distdir}
 
  
 %files
